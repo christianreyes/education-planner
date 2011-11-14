@@ -1,0 +1,29 @@
+body {
+	padding-top: 60px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	border-collapse: separate;
+}
+
+#copy_url {
+	margin: 5px;
+}
+
+.green {
+	background-color: #F0FFF0;
+}
+
+.smoke {
+	background-color: whiteSmoke;
+}
+
+td.content {
+	width: 50%;
+}
