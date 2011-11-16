@@ -16,14 +16,58 @@ th, td {
 	margin: 5px;
 }
 
+td, textarea {
+	color: #333 !important;
+}
+
 .green {
 	background-color: #F0FFF0;
 }
 
-.smoke {
-	background-color: whiteSmoke;
+.green:hover{
+	background-color: #D3EDE2;
+	cursor: pointer;
+}
+
+.smoke, .smoke-head {
+	background-color: #f7f7f7;
+}
+
+.smoke-head:hover {
+	background-color: #E5E5E5;
+	cursor: pointer;
 }
 
 td.content {
 	width: 50%;
+	padding: 0;
+}
+/*
+textarea {
+	white-space: pre;
+	width: 100%;
+	margin: 0;
+	height: 100%;
+	display: block;
+	resize: "none";
+}*/
+
+.autoGrow {
+	border: 0 white !important;
+	-webkit-box-shadow: 0 white !important;
+	box-shadow: 0 white !important;
+	-webkit-border-radius: 0 !important;
+	resize: none;
+}
+
+label.notes{
+	margin-top: 20px;
+}
+
+.notes-autoGrow{
+	resize: none;
+}
+
+a.close{
+	cursor: pointer;
 }

@@ -2,12 +2,14 @@
 <html>
   <head>
     <title>Education Planner</title>
-    <script src='jquery.min.js'></script>
-    <script src='form.js'></script>
     <link href='bootstrap.css' rel='stylesheet' />
     <link href='style.css' rel='stylesheet' />
+    <script src='jquery.min.js'></script>
+    <script src='application.js'></script>
+    <script src='jquery.autogrowtextarea.js'></script>
   </head>
   <body>
+    <!-- Topbar ================================================== -->
     <div class='topbar'>
       <div class='fill'>
         <div class='container'>
@@ -29,9 +31,10 @@
         </div>
       </div>
     </div>
+    <!-- Container ================================================== -->
     <div class='container'>
       <div class='row'>
-        <div class='span-one-third'>
+        <div class='span4'>
           <form class='form-stacked'>
             <fieldset>
               <legend>Plan Information</legend>
@@ -56,99 +59,173 @@
             </fieldset>
           </form>
         </div>
-        <div class='span-two-thirds'>
-          <h2>Making an Educational Plan</h2>
-          <p>Inga amag magna labani auaa esed eaabo enimaa labor na na. Dolo autet alia esalit euations ciaam ut laba si vabala duat velit adaa. Vaea inaati do inaa etur. Pa culla irunt exeaan sum laboa ocatata magna cupa.</p>
-          <p>Uaaae doamc nim esequ uat siat sit. Sataat laan aua oatua con dolo cuat voate dolor qat ut nima lorem. Daabo deaatat eu nosag coma co nim vela alabo eser ipia laali do. In adat niaata adat et exerat.</p>
-          <p>Inga amag magna labani auaa esed eaabo enimaa labor na na. Dolo autet alia esalit euations ciaam ut laba si vabala duat velit adaa. Vaea inaati do inaa etur. Pa culla irunt exeaan sum laboa ocatata magna cupa.</p>
+        <div class='span-8'>
+          <form class='form-stacked'>
+            <fieldset>
+              <div class='clearfix'>
+                <label class='notes'>Notes:</label>
+                <div class='input'>
+                  <textarea class='notes-autoGrow' cols='110' rows='7'></textarea>
+                </div>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
-      <div class='row'>
-        <table>
-          <tr class='green'>
+      <!-- Freshman ================================================== -->
+      <table>
+        <thead class='green'>
+          <tr>
             <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
               <h3>Freshman</h3>
             </th>
           </tr>
+        </thead>
+        <tbody>
           <tr class='smoke'>
             <th class='text-center'>Fall</th>
             <th class='text-center'>Spring</th>
           </tr>
           <tr>
-            <td class='content'>21-120 Differential & Integral Calculus<br>70-100 Global Business<br>73-100 Principles of Economics<br>76-101 Interpretation and Argument<br>99-101 Computing @ Carnegie Mellon<br>xx-xxx Breadth Requirement</td>
-            <td class='content'>21-256 Multivariate Analysis &amp; Approximation<br>73-150 Microeconomics<br>79-104 Global Histories<br>15-110 Principles of Computing<br>xx-xxx Breadth Requirements</td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>21-120 Differential & Integral Calculus&#x000A;70-100 Global Business&#x000A;73-100 Principles of Economics&#x000A;76-101 Interpretation and Argument&#x000A;99-101 Computing @ Carnegie Mellon&#x000A;xx-xxx Breadth Requirement</textarea>
+            </td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>21-256 Multivariate Analysis &amp; Approximation&#x000A;73-150 Microeconomics&#x000A;79-104 Global Histories&#x000A;15-110 Principles of Computing&#x000A;xx-xxx Breadth Requirements</textarea>
+            </td>
           </tr>
-        </table>
-        <table>
-          <tr class='smoke'>
-            <th class='text-center' colspan='2'>Summer</th>
-          </tr>
+        </tbody>
+      </table>
+      <!-- Freshman Summer ================================================== -->
+      <table>
+        <thead class='smoke-head'>
           <tr>
-            <td colspan='2'>Internship</td>
+            <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
+              Summer
+            </th>
           </tr>
-        </table>
-        <table>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='content' colspan='2'>
+              <textarea class='autoGrow' cols='154'>Internship</textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Sophomore ================================================== -->
+      <table>
+        <thead>
           <tr class='green'>
             <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
               <h3>Sophomore</h3>
             </th>
           </tr>
+        </thead>
+        <tbody>
           <tr class='smoke'>
             <th class='text-center'>Fall</th>
             <th class='text-center'>Spring</th>
           </tr>
           <tr>
-            <td class='content'>21-257 Models & Methods of Optimizations<br>70-122 Introduction to Accounting<br>70-207 Probability & Statistics<br>73-200 Macroeconomics<br>xx-xxx Breadth Requirement</td>
-            <td class='content'>70-208 Regression Analysis<br>70-311 Organizational Behavior<br>70-340 Business Communications<br>xx-xxx Breadth Requirement<br>xx-xxx Minor Requirement</td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>21-257 Models & Methods of Optimizations&#x000A;70-122 Introduction to Accounting&#x000A;70-207 Probability & Statistics&#x000A;73-200 Macroeconomics&#x000A;xx-xxx Breadth Requirement</textarea>
+            </td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>70-208 Regression Analysis&#x000A;70-311 Organizational Behavior&#x000A;70-340 Business Communications&#x000A;xx-xxx Breadth Requirement&#x000A;xx-xxx Minor Requirement</textarea>
+            </td>
           </tr>
-        </table>
-        <table>
-          <tr class='smoke'>
-            <th class='text-center' colspan='2'>Summer</th>
-          </tr>
+        </tbody>
+      </table>
+      <!-- Sophomore Summer ================================================== -->
+      <table>
+        <thead class='smoke-head'>
           <tr>
-            <td colspan='2'>Internship</td>
-          </tr>
-        </table>
-        <table>
-          <tr class='green'>
             <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
+              Summer
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='content' colspan='2'>
+              <textarea class='autoGrow' cols='154'>Internship</textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Junior ================================================== -->
+      <table>
+        <thead class='green'>
+          <tr>
+            <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
               <h3>Junior</h3>
             </th>
           </tr>
+        </thead>
+        <tbody>
           <tr class='smoke'>
             <th class='text-center'>Fall</th>
             <th class='text-center'>Spring</th>
           </tr>
           <tr>
-            <td class='content'>70-371 Production/Operations Management<br>70-381 Marketing<br>70-391 Finance<br>70-451 Management Information Systems<br>xx-xxx Breadth Requirement</td>
-            <td class='content'>70-332 Business, Society & Ethics<br>70-345 Business Presentations<br>70-xxx Track Course<br>70-xxx Track Course<br>70-201 Professional Service Project<br>xx-xxx Minor Requirement</td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>70-371 Production/Operations Management&#x000A;70-381 Marketing&#x000A;70-391 Finance&#x000A;70-451 Management Information Systems&#x000A;xx-xxx Breadth Requirement</textarea>
+            </td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>70-332 Business, Society & Ethics&#x000A;70-345 Business Presentations&#x000A;70-xxx Track Course&#x000A;70-xxx Track Course&#x000A;70-201 Professional Service Project&#x000A;xx-xxx Minor Requirement</textarea>
+            </td>
           </tr>
-        </table>
-        <table>
-          <tr class='smoke'>
-            <th class='text-center' colspan='2'>Summer</th>
-          </tr>
+        </tbody>
+      </table>
+      <!-- Junior Summer ================================================== -->
+      <table>
+        <thead class='smoke-head'>
           <tr>
-            <td colspan='2'>Internship</td>
-          </tr>
-        </table>
-        <table>
-          <tr class='green'>
             <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
+              Summer
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='content' colspan='2'>
+              <textarea class='autoGrow' cols='154'>Internship</textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Senior Summer ================================================== -->
+      <table>
+        <thead class='green'>
+          <tr>
+            <th class='text-center' colspan='2'>
+              <a class='close' href='#'>x</a>
               <h3>Senior</h3>
             </th>
           </tr>
+        </thead>
+        <tbody>
           <tr class='smoke'>
             <th class='text-center'>Fall</th>
             <th class='text-center'>Spring</th>
           </tr>
           <tr>
-            <td class='content'>70-xxx Track Course<br>70-xxx Track Course<br>xx-xxx Minor Requirement<br>xx-xxx Minor Requirement</td>
-            <td class='content'>70-401 Management Game<br>70-xxx Track Requirement<br>70-xxx Track Requirement<br>xx-xxx Minor Requirement<br>xx-xxx Minor Requirement</td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>70-xxx Track Course&#x000A;70-xxx Track Course&#x000A;xx-xxx Minor Requirement&#x000A;xx-xxx Minor Requirement</textarea>
+            </td>
+            <td class='content'>
+              <textarea class='autoGrow' cols='75'>70-401 Management Game&#x000A;70-xxx Track Requirement&#x000A;70-xxx Track Requirement&#x000A;xx-xxx Minor Requirement&#x000A;xx-xxx Minor Requirement</textarea>
+            </td>
           </tr>
-        </table>
-      </div>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

@@ -2,11 +2,14 @@
 %html 
 	%head
 		%title Education Planner
-		%script(src="jquery.min.js")
-		%script(src="form.js")
 		%link(href="bootstrap.css" rel="stylesheet")
 		%link(href="style.css" rel="stylesheet")
+		%script(src="jquery.min.js")
+		%script(src="application.js")
+		%script(src="jquery.autogrowtextarea.js")
 	%body
+		/ Topbar ==================================================
+	
 		.topbar
 			.fill
 				.container
@@ -20,9 +23,12 @@
 							%input{ :type => "text", :placeholder => "educationplanner.com/8xc7v5v9" }
 						%li
 							%button.btn#copy_url Copy
+							
+		/ Container ==================================================
+	
 		.container
 			.row
-				.span-one-third
+				.span4	
 					%form.form-stacked
 						%fieldset
 							%legend Plan Information
@@ -38,64 +44,108 @@
 								%label Minors(s)
 								.input
 									%input{:type => "text", :value => "Computer Science, Mathematics"}
-				.span-two-thirds
-					%h2 Making an Educational Plan
-					%p Inga amag magna labani auaa esed eaabo enimaa labor na na. Dolo autet alia esalit euations ciaam ut laba si vabala duat velit adaa. Vaea inaati do inaa etur. Pa culla irunt exeaan sum laboa ocatata magna cupa. 
-					%p Uaaae doamc nim esequ uat siat sit. Sataat laan aua oatua con dolo cuat voate dolor qat ut nima lorem. Daabo deaatat eu nosag coma co nim vela alabo eser ipia laali do. In adat niaata adat et exerat.
-					%p Inga amag magna labani auaa esed eaabo enimaa labor na na. Dolo autet alia esalit euations ciaam ut laba si vabala duat velit adaa. Vaea inaati do inaa etur. Pa culla irunt exeaan sum laboa ocatata magna cupa.  
-			.row
-				%table
+				.span-8
+					%form.form-stacked
+						%fieldset
+							.clearfix
+								%label.notes Notes:
+								.input
+									%textarea.notes-autoGrow{:cols => 110, :rows => 7}
+			/ Freshman ==================================================					
+			%table
+				%thead.green
+					%tr
+						%th.text-center{:colspan => 2} 
+							%a.close{:href => "#"} x 
+							%h3 Freshman
+				%tbody
+					%tr.smoke
+						%th.text-center Fall
+						%th.text-center Spring
+					%tr 
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "21-120 Differential & Integral Calculus\n70-100 Global Business\n73-100 Principles of Economics\n76-101 Interpretation and Argument\n99-101 Computing @ Carnegie Mellon\nxx-xxx Breadth Requirement"
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "21-256 Multivariate Analysis &amp; Approximation\n73-150 Microeconomics\n79-104 Global Histories\n15-110 Principles of Computing\nxx-xxx Breadth Requirements"				
+			/ Freshman Summer ==================================================				
+			%table
+				%thead.smoke-head
+					%tr
+						%th.text-center{:colspan => 2} 
+							%a.close{:href => "#"} x 
+							Summer
+				%tbody
+					%tr
+						%td.content{:colspan => 2} 
+							%textarea.autoGrow{:cols => 154}= "Internship"			
+			/ Sophomore ==================================================	
+			%table
+				%thead
 					%tr.green
 						%th.text-center{:colspan => 2} 
-							%h3 Freshman 
+							%a.close{:href => "#"} x 
+							%h3 Sophomore
+				%tbody 
 					%tr.smoke
 						%th.text-center Fall
 						%th.text-center Spring
 					%tr 
-						%td.content 21-120 Differential & Integral Calculus<br>70-100 Global Business<br>73-100 Principles of Economics<br>76-101 Interpretation and Argument<br>99-101 Computing @ Carnegie Mellon<br>xx-xxx Breadth Requirement
-						%td.content 21-256 Multivariate Analysis &amp; Approximation<br>73-150 Microeconomics<br>79-104 Global Histories<br>15-110 Principles of Computing<br>xx-xxx Breadth Requirements
-				%table
-					%tr.smoke
-						%th.text-center{:colspan => 2} Summer
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "21-257 Models & Methods of Optimizations\n70-122 Introduction to Accounting\n70-207 Probability & Statistics\n73-200 Macroeconomics\nxx-xxx Breadth Requirement"
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "70-208 Regression Analysis\n70-311 Organizational Behavior\n70-340 Business Communications\nxx-xxx Breadth Requirement\nxx-xxx Minor Requirement"
+			/ Sophomore Summer ==================================================
+							
+			%table
+				%thead.smoke-head
 					%tr
-						%td{:colspan => 2} Internship
-				%table
-					%tr.green
 						%th.text-center{:colspan => 2} 
-							%h3 Sophomore 
-					%tr.smoke
-						%th.text-center Fall
-						%th.text-center Spring
-					%tr 
-						%td.content 21-257 Models & Methods of Optimizations<br>70-122 Introduction to Accounting<br>70-207 Probability & Statistics<br>73-200 Macroeconomics<br>xx-xxx Breadth Requirement
-						%td.content 70-208 Regression Analysis<br>70-311 Organizational Behavior<br>70-340 Business Communications<br>xx-xxx Breadth Requirement<br>xx-xxx Minor Requirement
-				%table
-					%tr.smoke
-						%th.text-center{:colspan => 2} Summer
+							%a.close{:href => "#"} x 
+							Summer
+				%tbody
 					%tr
-						%td{:colspan => 2} Internship
-				%table
-					%tr.green
+						%td.content{:colspan => 2} 
+							%textarea.autoGrow{:cols => 154}= "Internship"
+			/ Junior ==================================================
+			%table
+				%thead.green
+					%tr
 						%th.text-center{:colspan => 2} 
-							%h3 Junior 
+							%a.close{:href => "#"} x 
+							%h3 Junior
+				%tbody
 					%tr.smoke
 						%th.text-center Fall
 						%th.text-center Spring
 					%tr 
-						%td.content 70-371 Production/Operations Management<br>70-381 Marketing<br>70-391 Finance<br>70-451 Management Information Systems<br>xx-xxx Breadth Requirement
-						%td.content 70-332 Business, Society & Ethics<br>70-345 Business Presentations<br>70-xxx Track Course<br>70-xxx Track Course<br>70-201 Professional Service Project<br>xx-xxx Minor Requirement
-				%table
-					%tr.smoke
-						%th.text-center{:colspan => 2} Summer
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "70-371 Production/Operations Management\n70-381 Marketing\n70-391 Finance\n70-451 Management Information Systems\nxx-xxx Breadth Requirement"
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "70-332 Business, Society & Ethics\n70-345 Business Presentations\n70-xxx Track Course\n70-xxx Track Course\n70-201 Professional Service Project\nxx-xxx Minor Requirement"
+			/ Junior Summer ==================================================
+			%table
+				%thead.smoke-head
 					%tr
-						%td{:colspan => 2} Internship
-				%table
-					%tr.green
-						%th.text-center{:colspan => 2}
-							%h3 Senior 
+						%th.text-center{:colspan => 2} 
+							%a.close{:href => "#"} x 
+							Summer
+				%tbody
+					%tr
+						%td.content{:colspan => 2} 
+							%textarea.autoGrow{:cols => 154}= "Internship"
+			/ Senior Summer ==================================================
+			%table
+				%thead.green
+					%tr
+						%th.text-center{:colspan => 2} 
+							%a.close{:href => "#"} x 
+							%h3 Senior
+				%tbody
 					%tr.smoke
 						%th.text-center Fall
 						%th.text-center Spring
 					%tr 
-						%td.content 70-xxx Track Course<br>70-xxx Track Course<br>xx-xxx Minor Requirement<br>xx-xxx Minor Requirement
-						%td.content 70-401 Management Game<br>70-xxx Track Requirement<br>70-xxx Track Requirement<br>xx-xxx Minor Requirement<br>xx-xxx Minor Requirement
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "70-xxx Track Course\n70-xxx Track Course\nxx-xxx Minor Requirement\nxx-xxx Minor Requirement"
+						%td.content 
+							%textarea.autoGrow{:cols => 75}= "70-401 Management Game\n70-xxx Track Requirement\n70-xxx Track Requirement\nxx-xxx Minor Requirement\nxx-xxx Minor Requirement"
